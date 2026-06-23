@@ -10,7 +10,8 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">ورود</button>
+        <button type="submit">ورود</button><br><br>
+        <a href="{% url 'password_reset' %}">رمز عبور خود را فراموش کرده اید؟</a>
     </form>
 
 {% endblock content %}

@@ -126,3 +126,6 @@ STATIC_URL = 'static/'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'books_list'
 LOGOUT_REDIRECT_URL = 'books_list'
+
+# Email config
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
