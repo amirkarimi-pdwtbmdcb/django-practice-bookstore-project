@@ -124,3 +124,5 @@ STATIC_URL = 'static/'
 
 # authentication settings
 AUTH_USER_MODEL = 'accounts.CustomUser'
+LOGIN_REDIRECT_URL = 'books_list'
+LOGOUT_REDIRECT_URL = 'books_list'

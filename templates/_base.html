@@ -10,6 +10,14 @@
     </title>
 </head>
 <body>
+    {% if user.is_authenticated %}
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">خروج</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">ورود</a> | <a href="{% url 'signup' %}">ثبت نام</a>
+{% endif %}
 
     {% block content %}
     
